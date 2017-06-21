@@ -8,6 +8,6 @@ const port = process.port ||3000;
 var app= express();
 app.use(express.static(masterpath));
 app.listen(port,()=>{
-console.log(`server running on port ${port}`);
+console.log(`server running on port`);
 })
 
