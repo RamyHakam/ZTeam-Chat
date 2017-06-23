@@ -4,6 +4,8 @@ const socketio=require('socket.io');
 const http=require('http');
 const masterpath= path.join(__dirname,'../public');
 const port = process.env.PORT || 3000;
+const {generateMessage} =require ('./utils/message');
+
 //creating app 
 var app= express();
 //creating app with http 
@@ -27,32 +29,19 @@ console.log("client message", Nmessage);
 
 
 //broadcast for all expect this user 
-socket.broadcast.emit('newMessage',{
-from:"admin",
-text:"new user joined chat",
-createdAt: new Date().getTime()
-});
+socket.broadcast.emit('newMessage', generateMessage('admin','new user joined'));
 
 //send for this user only 
 
-socket.emit('newMessage',{
-from:'admin',
-text:"welcom to chating",
-createdAt:new Date().getTime()
-});
+socket.emit('newMessage',generateMessage('admin','welcome to chating')
+);
 
 
 
 
 
 
-io.emit('newMessage',{
-from:Nmessage.from,
-to:Nmessage.text,
-createdAt: new Date().getTime()
-});
-
-
+io.emit('newMessage',generateMessage(Nmessage.from,Nmessage.text) );
 
 
 });
