@@ -75,7 +75,20 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
 
+var socket= io();
+socket.on('connect',()=>{
+
+console.log("connected to server");
+});
+socket.on('disconnect',()=>{
+
+console.log("connection closed");
+
+});
+</script>
 </body>
 
 </html>
