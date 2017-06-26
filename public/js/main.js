@@ -40,6 +40,10 @@ var li= jQuery(data);
 //li.text(`${message.from}:${message.text}`);
 jQuery("#messages").append(li);
 
+ var aSound = document.createElement('audio');
+     aSound.setAttribute('src', '../img/sounds/sound.mp3');
+     aSound.play();
+
 });
 
  jQuery('#message-form').on('submit',function(e){
