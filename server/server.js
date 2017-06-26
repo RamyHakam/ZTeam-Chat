@@ -20,8 +20,16 @@ console.log("new user connection");
 socket.on('disconnect',()=>{
 console.log("disconnected");
 });
+
+
+socket.emit('newMessage',generateMessage('admin','welcome to chating')
+);
 //socket.emit("newMessage",{from:'ramy',message:"test message"});
 socket.on('createMessage',function(Nmessage){
+
+
+
+
 
 console.log("client message", Nmessage);
 //send for all 
@@ -33,8 +41,7 @@ socket.broadcast.emit('newMessage', generateMessage('admin','new user joined'));
 
 //send for this user only 
 
-socket.emit('newMessage',generateMessage('admin','welcome to chating')
-);
+
 
 
 
