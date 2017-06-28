@@ -2,11 +2,38 @@
 var socket= io();
 socket.on('connect',()=>{
 
+
+var params= jQuery.deparam(window.location.search);
+socket.emit('join',params,function(error){
+if(error){
+window.location.href='/';
+
+}else{
+
+console.log("ok");
+}
+
+
+});
+
+
+
+
 console.log("connected to server");
 });
 socket.on('disconnect',()=>{
 
+
+
 console.log("connection closed");
+
+});
+
+socket.on('updateUsers',function(users){
+
+
+console.log(users);
+
 
 });
 
@@ -81,7 +108,6 @@ scrollToBottom();
  jQuery('#message-form').on('submit',function(e){
 e.preventDefault();
 socket.emit('createMessage',{
-from:'user',
 text:jQuery('#message').val()
 });
 text:jQuery('#message').val("");
