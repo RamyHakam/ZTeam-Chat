@@ -1,7 +1,7 @@
 {
   "name": "zteam-chat",
   "version": "1.0.0",
-  "description": "",
+  "description": "real time chat with socket io and express ",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -11,7 +11,7 @@
   "engines": {
     "node": "7.5.0"
   },
-  "author": "",
+  "author": "Ramy Hakam",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.3",
