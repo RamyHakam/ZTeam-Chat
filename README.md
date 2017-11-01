@@ -19,10 +19,12 @@ This App is for learning propuse only.You can Use it In any form
 
 1- Require it in your application 
 
-    var chat_app = require("zteam-chat");    `
+    var chat_app = require("zteam-chat");  
+    `
 2- Run the chating server with a port
 
      chat_app.run(9000);
+     
 3- Navigate to http://localhost:9000
 
 
