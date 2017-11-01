@@ -1,24 +1,24 @@
 {
-  "name": "zteam-chat",
-  "version": "1.0.0",
-  "description": "real time chat with socket io and express ",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "test": "mocha server/**/*.test.js",
-    "test-watch":"nodemon --exec 'npm test'"
-  },
-  "engines": {
-    "node": "7.5.0"
-  },
-  "author": "Ramy Hakam",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.3",
-    "socket.io": "^2.0.1"
-  },
-  "devDependencies": {
-    "expect": "^1.20.2",
-    "mocha": "^3.4.2"
-  }
+    "name": "zteam-chat",
+    "version": "1.0.0",
+    "description": "real time chat with socket io and express ",
+    "main": "index.js",
+    "scripts": {
+        "start": "./server/server.js",
+        "test": "mocha server/**/*.test.js",
+        "test-watch": "nodemon --exec 'npm test'"
+    },
+    "engines": {
+        "node": "7.5.0"
+    },
+    "author": "Ramy Hakam",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.15.3",
+        "socket.io": "^2.0.1"
+    },
+    "devDependencies": {
+        "expect": "^1.20.2",
+        "mocha": "^3.4.2"
+    }
 }
