@@ -12,6 +12,7 @@ This App is for learning propuse only.You can Use it In any form
 ## Install the package via npm
 
    $ npm install -g zteam-chat
+   
    $ zteam-chat
   
 ## How to use it in your application
