@@ -12,7 +12,7 @@ This App is for learning propuse only.You can Use it In any form
 ## Install the package via npm
 
    $ npm install -g zteam-chat
-   
+
    $ zteam-chat
   
 ## How to use it in your application
@@ -25,9 +25,15 @@ This App is for learning propuse only.You can Use it In any form
      chat_app.run(9000);
 3- Navigate to http://localhost:9000
 
+
+![Login](/../master/shots/login.png?raw=true "Login Page")
+
 4- Write Display name and Room name
 
 5- Any others users on the same network can join your Chating Room Now
+
+![Chat](/../master/shots/chat-room.png?raw=true "Chat Room")
+
 
 ## Project Home Page
 
