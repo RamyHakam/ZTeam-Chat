@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
         console.log("disconnected");
         var user = users.removeUser(socket.id);
         if (user) {
-            console.log('user', user.room);
+            
             io.to(user.room).emit('updateUsers', users.getList(user.room));
             io.to(user.room).emit('newMessage', generateMessage('Admin', `${user.name} has beed leave the chat`));
         }
@@ -44,7 +44,6 @@ io.on('connection', (socket) => {
             socket.join(params.Room);
             users.removeUser(socket.id);
             users.addUser(socket.id, params.Name, params.Room);
-            console.log(users);
 
             io.to(params.Room).emit('updateUsers', users.getList(params.Room))
 
@@ -60,7 +59,6 @@ io.on('connection', (socket) => {
         //get user info 
         var user = users.getUser(socket.id);
         io.to(user.room).emit('newMessage', generateMessage(user.name, Nmessage.text));
-        console.log("client message", Nmessage);
         //send for all 
         //broadcast for all expect this user 
         //socket.broadcast.emit('newMessage', generateMessage('admin','new user joined'));
