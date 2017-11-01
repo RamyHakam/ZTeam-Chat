@@ -1,3 +1,5 @@
+/////////////////////////////////
+//Attach dependancies
 const path = require('path');
 const express = require('express');
 const socketio = require('socket.io');
@@ -9,13 +11,13 @@ const { Users } = require('./utils/users');
 //creating app 
 var app = express();
 //creating app with http 
-
 var server = http.createServer(app);
 //adding socketio
 var io = socketio(server);
+//get user object 
 var users = new Users();
 app.use(express.static(masterpath));
-
+//init socket 
 io.on('connection', (socket) => {
     console.log("new user connection");
     socket.on('disconnect', () => {
@@ -29,8 +31,7 @@ io.on('connection', (socket) => {
         }
 
     });
-
-
+    //Join Chat room
 
     socket.on('join', (params, callback) => {
 
@@ -47,40 +48,23 @@ io.on('connection', (socket) => {
 
             io.to(params.Room).emit('updateUsers', users.getList(params.Room))
 
-            //send welcome to user 
-            //socket.to(params.Room).emit('newMessage',generateMessage('Admin',`Welcom to chat ${params.Name}`));
-            //send user has joinedto others 
-
             socket.emit('newMessage', generateMessage('Admin', 'Welcome to ZTeam Chat App'));
 
             socket.broadcast.to(params.Room).emit('newMessage', generateMessage('Admin', ` ${params.Name} has been joined`));
 
             callback();
-
-
-
         }
-
-
-
     });
-
+    
     socket.on('createMessage', function(Nmessage) {
-
         //get user info 
-
-
         var user = users.getUser(socket.id);
-
         io.to(user.room).emit('newMessage', generateMessage(user.name, Nmessage.text));
         console.log("client message", Nmessage);
         //send for all 
-
-
         //broadcast for all expect this user 
         //socket.broadcast.emit('newMessage', generateMessage('admin','new user joined'));
-
-        //send for this user only 
+        
 
     });
 

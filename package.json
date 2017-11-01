@@ -4,7 +4,7 @@
     "description": "real time chat with socket io and express ",
     "main": "index.js",
     "scripts": {
-        "start": "./server/server.js",
+        "start": "node index.js",
         "test": "mocha server/**/*.test.js",
         "test-watch": "nodemon --exec 'npm test'"
     },
