@@ -11,9 +11,10 @@ This App is for learning propuse only.You can Use it In any form
 
 ## Install the package via npm
 
-    npm install --save zteam-chat
+   $ npm install -g zteam-chat
+   $ zteam-chat
   
-## How to use it
+## How to use it in your application
 
 1- Require it in your application 
 
