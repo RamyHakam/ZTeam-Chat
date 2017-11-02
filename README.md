@@ -1,6 +1,9 @@
 # ZTeam  Chat  
   ![Build Status](https://travis-ci.org/Z-Team-Pro/ZTeam-Chat.svg?branch=master)
   ![issuse](https://img.shields.io/github/issues/Z-Team-Pro/ZTeam-Chat.svg)
+  ![Lincense](https://img.shields.io/github/license/Z-Team-Pro/ZTeam-Chat.svg)
+  ![stars](https://img.shields.io/github/stars/Z-Team-Pro/ZTeam-Chat.svg)
+  ![forks](https://img.shields.io/github/forks/Z-Team-Pro/ZTeam-Chat.svg)
   
 
 This Package is a simple real time Chat app 
