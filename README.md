@@ -1,6 +1,6 @@
 # ZTeam  Chat  
   ![Build Status](https://travis-ci.org/Z-Team-Pro/ZTeam-Chat.svg?branch=master)
-  ![downloads](https://img.shields.io/badge/downloads-148-lightgrey.svg)
+  ![downloads](https://img.shields.io/badge/downloads-184-lightgrey.svg)
   ![version](https://img.shields.io/badge/version-1.3.3-blue.svg)
   ![issuse](https://img.shields.io/github/issues/Z-Team-Pro/ZTeam-Chat.svg)
   ![Lincense](https://img.shields.io/github/license/Z-Team-Pro/ZTeam-Chat.svg)
