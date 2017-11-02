@@ -1,4 +1,6 @@
 # ZTeam  Chat  
+  ![Stars Status](https://img.shields.io/github/stars/Z-Team-Pro/ZTeam-Chat.svg)
+
 This Package is a simple real time Chat app 
 Where you can use it in your porject as a real time room chating 
 
